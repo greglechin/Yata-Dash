@@ -4,7 +4,7 @@
     "name": "trackerpathways",
     "url": "https://github.com/handokota/trackerpathways",
     "license": "MIT",
-    "fetched": "2026-06-12"
+    "fetched": "2026-07-07"
   },
   "abbr": {
     "ABTorrents": "ABT",
@@ -71,6 +71,7 @@
     "HDSky": "HDS",
     "HDZero": "HDZ",
     "HELLENIC-HD": "HLN",
+    "HappyFappy": "HF",
     "Hawke-uno": "HUNO",
     "HellasHut": "HH",
     "HomieHelpDesk": "HHD",
@@ -100,6 +101,7 @@
     "MyAnonamouse": "MAM",
     "MySpleen": "MS",
     "Nebulance": "NBL",
+    "Nexum": "NXM",
     "NordicQuality": "NQ",
     "Nzbplanet": "NZBP",
     "OldToonsWorld": "OTW",
@@ -138,6 +140,7 @@
     "Speed.cd": "SPD",
     "SpeedApp": "SA",
     "SportsCult": "SPC",
+    "SugoiMusic": "SM",
     "Superbits": "SB",
     "TLFBits": "TLF",
     "TV-Vault": "TVV",
@@ -158,6 +161,7 @@
     "TranceTraffic": "TT",
     "TurkSeed": "TKS",
     "U2.dmhy": "U2",
+    "UHDBits": "UHDB",
     "UTOPIA": "UTP",
     "Unwalled": "UNW",
     "Upload.cx": "ULCX",
@@ -402,7 +406,15 @@
       "days": 180,
       "reqs": "6 months",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "AnimeBytes",
+      "to": "Anthelion",
+      "days": 0,
+      "reqs": "No requirement",
+      "active": true,
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -410,7 +422,7 @@
       "days": 180,
       "reqs": "6 months, 4TB upload",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -418,7 +430,15 @@
       "days": 180,
       "reqs": "6 months, ratio\u003e1, seeding at least half of your snatched torrents",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "AnimeBytes",
+      "to": "BeyondHD",
+      "days": 365,
+      "reqs": "Elite, 1 year",
+      "active": true,
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -426,7 +446,15 @@
       "days": 365,
       "reqs": "TM, 1 year",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "AnimeBytes",
+      "to": "CapybaraBR",
+      "days": 0,
+      "reqs": "No requirement",
+      "active": true,
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -434,7 +462,7 @@
       "days": 0,
       "reqs": "No requirement",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -442,7 +470,7 @@
       "days": 360,
       "reqs": "TM, 12 months, 50 perfect FLACs, ratio\u003e=1.5",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -450,7 +478,7 @@
       "days": 0,
       "reqs": "10 music torrents or 15 other torrents",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -458,7 +486,7 @@
       "days": 180,
       "reqs": "6 months",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -466,7 +494,7 @@
       "days": 0,
       "reqs": "No requirement",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -474,7 +502,7 @@
       "days": 90,
       "reqs": "3 months",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -482,7 +510,15 @@
       "days": 365,
       "reqs": "Legend, 1 year, 3 profile links",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "AnimeBytes",
+      "to": "HappyFappy",
+      "days": 0,
+      "reqs": "No requirement",
+      "active": true,
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -490,7 +526,7 @@
       "days": 0,
       "reqs": "No requirement",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -498,7 +534,15 @@
       "days": 90,
       "reqs": "3 months",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "AnimeBytes",
+      "to": "Nebulance",
+      "days": 0,
+      "reqs": "No requirement",
+      "active": true,
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -506,7 +550,7 @@
       "days": 90,
       "reqs": "3 months, seedsize\u003e=1TB OR Average Seedtime\u003e=1month",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -514,7 +558,7 @@
       "days": 0,
       "reqs": "No requirement",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -522,7 +566,7 @@
       "days": 730,
       "reqs": "Legend, 2 years",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -530,7 +574,7 @@
       "days": 0,
       "reqs": "No requirement",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -538,7 +582,15 @@
       "days": 0,
       "reqs": "No requirement",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "AnimeBytes",
+      "to": "SugoiMusic",
+      "days": 0,
+      "reqs": "No requirement",
+      "active": true,
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -546,7 +598,7 @@
       "days": 0,
       "reqs": "No requirement",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -554,7 +606,7 @@
       "days": 0,
       "reqs": "No requirement",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -562,7 +614,7 @@
       "days": 0,
       "reqs": "2-3x full tracker profile screenshots (including AB)",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeBytes",
@@ -570,7 +622,7 @@
       "days": 0,
       "reqs": "2 options: A) Contribute original content (include some photos of your self-brought stuff), and give some example of your uploads here (links). B) Screenshot your current anime collection and write 1 short paragraph (no longer than 100 words) to introduce your favorite anime in current season or previous season to me (imagine you want me to get attracted by your introduction and watch it).",
       "active": true,
-      "updated": "Jan 2026"
+      "updated": "Jun 2026"
     },
     {
       "from": "AnimeWorld",
@@ -1016,7 +1068,15 @@
       "from": "Bibliotik",
       "to": "SceneHD",
       "days": 365,
-      "reqs": "1 year",
+      "reqs": "1 year, 2+ proofs from other trackers",
+      "active": true,
+      "updated": "Nov 2024"
+    },
+    {
+      "from": "Bibliotik",
+      "to": "TheEmpire",
+      "days": 0,
+      "reqs": "No requirement",
       "active": true,
       "updated": "Nov 2024"
     },
@@ -1033,7 +1093,7 @@
       "to": "ThePlace",
       "days": 0,
       "reqs": "No requirement",
-      "active": false,
+      "active": true,
       "updated": "Nov 2024"
     },
     {
@@ -1041,7 +1101,7 @@
       "to": "TheShow",
       "days": 0,
       "reqs": "No requirement",
-      "active": false,
+      "active": true,
       "updated": "Nov 2024"
     },
     {
@@ -1049,7 +1109,7 @@
       "to": "TheVault",
       "days": 180,
       "reqs": "6 months",
-      "active": false,
+      "active": true,
       "updated": "Nov 2024"
     },
     {
@@ -1159,10 +1219,10 @@
     {
       "from": "Blutopia",
       "to": "LST",
-      "days": 0,
-      "reqs": "No requirement",
+      "days": 180,
+      "reqs": "6 months",
       "active": false,
-      "updated": "Nov 2025"
+      "updated": "June 2026"
     },
     {
       "from": "Blutopia",
@@ -1445,6 +1505,54 @@
       "updated": "Nov 2024"
     },
     {
+      "from": "BrokenStones",
+      "to": "LST",
+      "days": 90,
+      "reqs": "3 months",
+      "active": true,
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "BrokenStones",
+      "to": "Luminarr",
+      "days": 90,
+      "reqs": "3 months",
+      "active": true,
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "BrokenStones",
+      "to": "MyAnonamouse",
+      "days": 0,
+      "reqs": "No requirement",
+      "active": true,
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "BrokenStones",
+      "to": "PixelCove",
+      "days": 0,
+      "reqs": "No requirement",
+      "active": true,
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "BrokenStones",
+      "to": "ReelFliX",
+      "days": 0,
+      "reqs": "No requirement",
+      "active": true,
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "BrokenStones",
+      "to": "YuScene",
+      "days": 0,
+      "reqs": "No requirement",
+      "active": true,
+      "updated": "Jun 2026"
+    },
+    {
       "from": "CapybaraBR",
       "to": "DarkPeers",
       "days": 0,
@@ -1545,16 +1653,48 @@
       "to": "Aither",
       "days": 180,
       "reqs": "Superfan+, 6 months",
+      "active": true,
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "Cinemageddon",
+      "to": "Anthelion",
+      "days": 0,
+      "reqs": "Abandoned",
       "active": false,
-      "updated": "Mar 2025"
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "Cinemageddon",
+      "to": "Blutopia",
+      "days": 180,
+      "reqs": "Superfan+, 6 months",
+      "active": true,
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "Cinemageddon",
+      "to": "BroadCity",
+      "days": 0,
+      "reqs": "Site is dead",
+      "active": false,
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "Cinemageddon",
+      "to": "BrokenStones",
+      "days": 180,
+      "reqs": "Superfan+, 6 months",
+      "active": true,
+      "updated": "Jun 2026"
     },
     {
       "from": "Cinemageddon",
       "to": "Great Poster Wall",
       "days": 0,
-      "reqs": "PU+, 10 uploads",
+      "reqs": "Superfan+, 10 uploads",
       "active": true,
-      "updated": "Mar 2025"
+      "updated": "Jun 2026"
     },
     {
       "from": "Cinemageddon",
@@ -1562,15 +1702,31 @@
       "days": 0,
       "reqs": "Abandoned",
       "active": false,
-      "updated": "Mar 2025"
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "Cinemageddon",
+      "to": "JPTV.club",
+      "days": 0,
+      "reqs": "Site is dead",
+      "active": false,
+      "updated": "Jun 2026"
     },
     {
       "from": "Cinemageddon",
       "to": "MyAnonamouse",
       "days": 0,
-      "reqs": "No requirement",
+      "reqs": "Superfan+",
       "active": true,
-      "updated": "Mar 2025"
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "Cinemageddon",
+      "to": "Nebulance",
+      "days": 0,
+      "reqs": "Abandoned",
+      "active": false,
+      "updated": "Jun 2026"
     },
     {
       "from": "Cinemageddon",
@@ -1578,7 +1734,7 @@
       "days": 0,
       "reqs": "Abandoned",
       "active": false,
-      "updated": "Oct 2025"
+      "updated": "Jun 2026"
     },
     {
       "from": "Cinemageddon",
@@ -1586,15 +1742,39 @@
       "days": 0,
       "reqs": "Abandoned",
       "active": false,
-      "updated": "Mar 2025"
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "Cinemageddon",
+      "to": "PixelCove",
+      "days": 0,
+      "reqs": "Superfan+",
+      "active": true,
+      "updated": "Jun 2026"
     },
     {
       "from": "Cinemageddon",
       "to": "ReelFliX",
       "days": 0,
-      "reqs": "No requirement",
+      "reqs": "Superfan+",
       "active": true,
-      "updated": "Mar 2025"
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "Cinemageddon",
+      "to": "RetroFlix",
+      "days": 180,
+      "reqs": "Superfan+, 6 months",
+      "active": true,
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "Cinemageddon",
+      "to": "ShareIsland",
+      "days": 180,
+      "reqs": "Superfan+, 6 months",
+      "active": true,
+      "updated": "Jun 2026"
     },
     {
       "from": "Cinemageddon",
@@ -1602,7 +1782,7 @@
       "days": 0,
       "reqs": "No requirement",
       "active": true,
-      "updated": "Mar 2025"
+      "updated": "Jun 2026"
     },
     {
       "from": "Cinemageddon",
@@ -1610,7 +1790,7 @@
       "days": 0,
       "reqs": "Abandoned",
       "active": false,
-      "updated": "Mar 2025"
+      "updated": "Jun 2026"
     },
     {
       "from": "Cinemageddon",
@@ -1618,7 +1798,7 @@
       "days": 0,
       "reqs": "Abandoned",
       "active": false,
-      "updated": "Mar 2025"
+      "updated": "Jun 2026"
     },
     {
       "from": "Cinemageddon",
@@ -1626,7 +1806,7 @@
       "days": 0,
       "reqs": "Abandoned",
       "active": false,
-      "updated": "Mar 2025"
+      "updated": "Jun 2026"
     },
     {
       "from": "Cinemageddon",
@@ -1634,7 +1814,7 @@
       "days": 0,
       "reqs": "Abandoned",
       "active": false,
-      "updated": "Mar 2025"
+      "updated": "Jun 2026"
     },
     {
       "from": "Cinemageddon",
@@ -1642,7 +1822,7 @@
       "days": 0,
       "reqs": "Abandoned",
       "active": false,
-      "updated": "Mar 2025"
+      "updated": "Jun 2026"
     },
     {
       "from": "Cinemageddon",
@@ -1650,7 +1830,15 @@
       "days": 0,
       "reqs": "Abandoned",
       "active": false,
-      "updated": "Mar 2025"
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "Cinemageddon",
+      "to": "UHDBits",
+      "days": 0,
+      "reqs": "Site is dead",
+      "active": false,
+      "updated": "Jun 2026"
     },
     {
       "from": "Cinemageddon",
@@ -1658,7 +1846,7 @@
       "days": 0,
       "reqs": "Superfan+, 5 seeded uploads",
       "active": true,
-      "updated": "Mar 2025"
+      "updated": "Jun 2026"
     },
     {
       "from": "DarkPeers",
@@ -2590,11 +2778,11 @@
     },
     {
       "from": "JPopsuki",
-      "to": "U2.dmhy",
-      "days": 90,
-      "reqs": "2 unlimited invite posts, one suspended, another active (requiring 3 months, ACG collection proofs)",
+      "to": "SugoiMusic",
+      "days": 0,
+      "reqs": "No Requirement",
       "active": true,
-      "updated": "Mar 2023"
+      "updated": "Jun 2026"
     },
     {
       "from": "KaraGarga",
@@ -2602,7 +2790,31 @@
       "days": 0,
       "reqs": "No requirement",
       "active": true,
-      "updated": "Nov 2024"
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "KaraGarga",
+      "to": "BeyondHD",
+      "days": 730,
+      "reqs": "PU, 2 years, 1 upload",
+      "active": true,
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "KaraGarga",
+      "to": "BrokenStones",
+      "days": 0,
+      "reqs": "PU",
+      "active": true,
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "KaraGarga",
+      "to": "Canal Street",
+      "days": 0,
+      "reqs": "PU",
+      "active": true,
+      "updated": "Jun 2026"
     },
     {
       "from": "KaraGarga",
@@ -2610,7 +2822,7 @@
       "days": 0,
       "reqs": "PU, 5 uploads",
       "active": true,
-      "updated": "Nov 2024"
+      "updated": "Jun 2026"
     },
     {
       "from": "KaraGarga",
@@ -2618,7 +2830,7 @@
       "days": 90,
       "reqs": "PU, 3 months",
       "active": true,
-      "updated": "Nov 2024"
+      "updated": "Jun 2026"
     },
     {
       "from": "KaraGarga",
@@ -2626,7 +2838,15 @@
       "days": 365,
       "reqs": "3x 1 year additional profile links",
       "active": true,
-      "updated": "Nov 2024"
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "KaraGarga",
+      "to": "Nexum",
+      "days": 0,
+      "reqs": "No requirement",
+      "active": true,
+      "updated": "Jun 2026"
     },
     {
       "from": "KaraGarga",
@@ -2634,7 +2854,7 @@
       "days": 730,
       "reqs": "2 years with either 250 movie uploads or 30 completed subtitle pots",
       "active": true,
-      "updated": "Nov 2025"
+      "updated": "Jun 2026"
     },
     {
       "from": "KaraGarga",
@@ -2642,7 +2862,7 @@
       "days": 90,
       "reqs": "PU, 3 months, 5 uploads",
       "active": true,
-      "updated": "Nov 2024"
+      "updated": "Jun 2026"
     },
     {
       "from": "LST",
@@ -3207,6 +3427,14 @@
     {
       "from": "MyAnonamouse",
       "to": "seedpool",
+      "days": 0,
+      "reqs": "No requirement",
+      "active": true,
+      "updated": "Jun 2026"
+    },
+    {
+      "from": "MySpleen",
+      "to": "Orpheus",
       "days": 0,
       "reqs": "No requirement",
       "active": true,
@@ -4874,6 +5102,10 @@
       "days": 28,
       "text": "PU: 4 weeks, 250GB upload/download, 250 snatches (upload/download), 250,000 bonus points"
     },
+    "BrokenStones": {
+      "days": 28,
+      "text": "PU: 4 weeks, 50GB upload, 1 upload, ratio\u003e=1.05"
+    },
     "CapybaraBR": {
       "days": 30,
       "text": "Arara: 1 month, 1 TiB upload, ratio\u003e=1.0"
@@ -4885,6 +5117,10 @@
     "Cinemageddon": {
       "days": 0,
       "text": "Superfan: 200GB upload, 20GB download, ratio\u003e1.5"
+    },
+    "Cinematik": {
+      "days": 0,
+      "text": "FilmEnthusiast: 60+ days, 5TB upload, ratio ≥ 1.05"
     },
     "DarkPeers": {
       "days": 120,
@@ -4965,6 +5201,10 @@
     "MyAnonamouse": {
       "days": 180,
       "text": "PU: 6 months, 1 TiB upload, ratio\u003e=2"
+    },
+    "MySpleen": {
+      "days": 0,
+      "text": "No requirement"
     },
     "Nebulance": {
       "days": 28,
