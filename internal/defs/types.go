@@ -329,6 +329,26 @@ type GroupRequirements struct {
 	// Whale): uploads+ratio+age+seedtime above, any_of: [{min_seed_size:
 	// "6 TiB"}, {min_uploaded: "25 TiB"}]. Entries must not nest further.
 	AnyOf []GroupRequirements `json:"any_of,omitempty"`
+
+	// MinCounts are minimum counts of arbitrary per-tracker stat fields —
+	// e.g. HUNO promotes on "torrents seeding within a seed-time bracket"
+	// (vanguard_seeds ≥ 1, champion_seeds ≥ 10, …) where each bracket count
+	// arrives as its own API stat. An ordered slice (not a map) so the def
+	// controls display order. Rendered live from the def like any_of — the
+	// entries are never copied into a tracker's stored targets map.
+	MinCounts []MinCountReq `json:"min_counts,omitempty"`
+}
+
+// MinCountReq is one "stat field ≥ count" group requirement (see
+// GroupRequirements.MinCounts).
+type MinCountReq struct {
+	// Field is the canonical stat field holding the current count.
+	Field string `json:"field"`
+	// Count is the minimum required value.
+	Count int `json:"count"`
+	// Label overrides the generic field label in target rows, e.g.
+	// "Vanguard (1–10d seed)" instead of "Vanguard Seeds".
+	Label string `json:"label,omitempty"`
 }
 
 // GroupPerk is one benefit a group enjoys.

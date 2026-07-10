@@ -2,7 +2,7 @@
 import type { AppSettings, Tracker, TrackerGroupMap, TrackerStatsResponse } from '../types';
 import { appSettings, fieldOf, numOf, scrapeStatus, strOf } from '../state';
 import { eventGlobeSvg } from '../utils/icons';
-import { esc, errLabel, fmtEtaDays, fmtRatio, fmtSeedTime, fmtTrackerName, rateTip, ratioColorFor, srcDot } from '../utils/format';
+import { esc, errLabel, fieldLabel, fmtEtaDays, fmtRatio, fmtSeedTime, fmtTrackerName, rateTip, ratioColorFor, srcDot } from '../utils/format';
 import { getFaviconUrl, memberDays, memberDur, parseAgeDays, parseSize, parseSeedTime } from '../utils/parse';
 import { findGroupDef, groupRequirementsToTargets, renderGroupBadge, renderUsername } from '../utils/group';
 import { buildStatRows, buildScrapeRefreshBtn } from '../components/profile';
@@ -462,6 +462,22 @@ export function buildTargets(
   // groupDefs data (NEVER stored in the targets map, which holds base
   // requirements only). Base must be met PLUS at least one alternative.
   const targetGroupDef = tracker.target_group && groupDefs ? findGroupDef(groupDefs, tKey, tracker.target_group) : undefined;
+
+  // min_counts requirements (e.g. HUNO's seed-time brackets) — also rendered
+  // live from the target group's def, in def order, never stored in the
+  // targets map. Folded into `rows` so the promotion-ETA headline and
+  // "Eligible now" state see them as base requirements.
+  for (const mc of targetGroupDef?.requirements?.min_counts ?? []) {
+    if (!mc.field || !(mc.count > 0)) continue;
+    const label = mc.label || fieldLabel(mc.field);
+    const curStr = strOf(stats, mc.field);
+    const curV = parseInt(curStr.replace(/,/g, ''), 10);
+    if (curStr && !isNaN(curV)) {
+      rows.push({ label, cur: curStr, tgt: String(mc.count), pct: Math.min(100, Math.max(0, (curV / mc.count) * 100)), color: 'teal' });
+    } else {
+      rows.push({ label, cur: '—', tgt: String(mc.count), pct: 0, color: 'teal' });
+    }
+  }
   const anyOf = targetGroupDef?.requirements?.any_of ?? [];
   const anyOfHtml = anyOf.length
     ? `<div class="anyof-wrap">

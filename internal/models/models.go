@@ -87,8 +87,10 @@ type TrackerView struct {
 	// ProfileURL is the user's profile page on the tracker ("" when unknown).
 	ProfileURL string `json:"profile_url,omitempty"`
 	// RequiredFields lists extra config fields this tracker's type needs
-	// (e.g. gazelle requires "username").
-	RequiredFields []string `json:"required_fields,omitempty"`
+	// (e.g. gazelle requires "username"), minus any the tracker def's API
+	// already provides. No omitempty: an empty list must reach the UI as []
+	// so it doesn't fall back to the type-level default.
+	RequiredFields []string `json:"required_fields"`
 	// MinRatio is the tracker's account-wide required ratio (0 = unknown).
 	// The UI colors the ratio red only below this when set.
 	MinRatio float64 `json:"min_ratio,omitempty"`

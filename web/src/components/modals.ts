@@ -10,7 +10,7 @@ import { MASKED_KEY, TARGET_KEYS } from '../types';
 import * as api from '../api';
 import { approvalIcon, approvalWarns } from '../utils/approval';
 import { eventGlobeSvg } from '../utils/icons';
-import { esc, fmtAgeDays, fmtBytes, fmtEtaDays, fmtSeedTime, fmtTrackerName } from '../utils/format';
+import { esc, fieldLabel, fmtAgeDays, fmtBytes, fmtEtaDays, fmtSeedTime, fmtTrackerName } from '../utils/format';
 import { parseAgeDays, parseSeedTime } from '../utils/parse';
 import { renderGroupBadge, renderUsername } from '../utils/group';
 import { findOptOut, optOutMessage } from '../utils/optout';
@@ -281,6 +281,9 @@ function applyPredefinedDef(def: DefInfo) {
   show('modal-add-divider');
   showFormForType(def.type);
   if (def.type === 'custom') applyCustomCredentialLabels(def);
+  // Def-level required fields beat the type default showFormForType applied —
+  // a field the def's API provides (e.g. HUNO's join_date) isn't demanded.
+  applyRequiredFieldsUI(def.required_fields ?? typeRequiredFields(def.type));
   setEl('modal-save-btn', `Add ${def.name}`);
 }
 
@@ -1627,6 +1630,7 @@ function fmtAnyOfAlt(a: GroupRequirements): string {
   if (a.min_uploads)      parts.push(`${a.min_uploads} uploads`);
   if (a.min_bonus_points) parts.push(`${a.min_bonus_points.toLocaleString()} bonus`);
   if (a.min_age)          parts.push(`${a.min_age} account age`);
+  for (const mc of a.min_counts ?? []) parts.push(`${mc.count} ${mc.label || fieldLabel(mc.field)}`);
   return parts.join(' + ') || '—';
 }
 
@@ -1685,6 +1689,7 @@ function renderGroupHint(trackerKey: string, groupName: string): void {
     if (req.min_adoptions)     labels.push(`Adoptions: ${req.min_adoptions}`);
     if (req.min_bonus_points)  labels.push(`Bonus: ${req.min_bonus_points.toLocaleString()}`);
     if (req.min_age)           labels.push(`Age: ${req.min_age}`);
+    for (const mc of req.min_counts ?? []) labels.push(`${mc.label || fieldLabel(mc.field)}: ${mc.count}`);
     const text = labels.length ? labels.join(' · ') : 'No stat requirements for this group.';
     // any_of alternatives — base requirements above PLUS at least one of these
     const anyOfText = req.any_of?.length

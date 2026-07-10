@@ -236,6 +236,16 @@
         "any_of": [
           { "min_seed_size": "6 TiB" },
           { "min_uploaded": "25 TiB" }
+        ],
+
+        // Minimum counts of per-tracker stat fields, for trackers that
+        // promote on custom counters (e.g. seed-time brackets:
+        // "N torrents seeding for 6m–1y"). "field" is the stat field the
+        // API maps the counter to; "label" overrides the generic field
+        // label in target rows. Ordered — displayed exactly as written.
+        // Never copied into a user's stored targets; always live from here.
+        "min_counts": [
+          { "field": "knight_seeds", "count": 50, "label": "Knight" }
         ]
       },
 

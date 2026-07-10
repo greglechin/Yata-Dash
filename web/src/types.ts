@@ -319,6 +319,19 @@ export interface GroupRequirements {
    * PLUS at least ONE complete any_of entry. Entries never nest further.
    */
   any_of?: GroupRequirements[];
+  /**
+   * Minimum counts of per-tracker stat fields (e.g. HUNO's seed-time
+   * brackets: vanguard_seeds ≥ 1). Ordered — rendered live from the def,
+   * never copied into the stored targets map.
+   */
+  min_counts?: MinCountReq[];
+}
+
+/** One "stat field ≥ count" group requirement (GroupRequirements.min_counts). */
+export interface MinCountReq {
+  field: string;  // canonical stat field holding the current count
+  count: number;  // minimum required value
+  label?: string; // display override, e.g. "Vanguard (1–10d seed)"
 }
 
 export interface GroupDef {
@@ -346,6 +359,8 @@ export interface DefInfo {
   api_key_hint?: string;
   approval_status?: string; // approved | informal | pending | unknown
   approval_note?: string;
+  /** Type's required config fields minus any the def's API provides. */
+  required_fields?: string[];
 }
 
 export interface TypeInfo {

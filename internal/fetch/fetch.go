@@ -297,7 +297,7 @@ func (c *Client) fetchCustom(t models.Tracker) (map[string]any, *Error) {
 		}
 		switch val := v.(type) {
 		case string:
-			out[canonical] = val
+			out[canonical] = normalizeCustomString(canonical, val)
 		case float64:
 			// Ratio/points fields stay float; other numerics are counts.
 			if canonical == "ratio" || canonical == "bonus_points" || canonical == "fl_tokens" {
@@ -346,6 +346,25 @@ func (c *Client) fetchCustom(t models.Tracker) (map[string]any, *Error) {
 		out["buffer"] = parse.BytesToSize(max(rawBytes["uploaded"]-rawBytes["downloaded"], 0))
 	}
 	return out, nil
+}
+
+// normalizeCustomString cleans up string values from custom APIs per
+// canonical field, so defs don't each need conversion machinery:
+//   - join_date: ISO datetimes ("2022-01-01T00:00:00+00:00") → date only.
+//   - ratio/real_ratio: "Inf"/"∞" (downloaded = 0) → "Infinity", which the
+//     frontend parses to a real Infinity and renders as ∞ (green).
+func normalizeCustomString(canonical, v string) string {
+	switch canonical {
+	case "join_date":
+		if len(v) > 10 && v[10] == 'T' {
+			return v[:10]
+		}
+	case "ratio", "real_ratio":
+		if strings.EqualFold(v, "inf") || v == "∞" {
+			return "Infinity"
+		}
+	}
+	return v
 }
 
 // nested traverses a map using a dot-notation path, e.g. "leeching.count".
