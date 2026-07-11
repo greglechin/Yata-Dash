@@ -2,7 +2,7 @@
 
 > Self-hosted dashboard for monitoring your stats across all your private trackers — one page, one binary, your data stays yours.
 
-![Dashboard](docs/screenshots/dashboard-grid.png)
+
 
 Yata pulls your stats from each tracker's **API** (and, where the operator permits it, politely fills the gaps from your profile page), stores everything in a local SQLite database, and shows it all on one dashboard: unified stats, group/rank progress, promotion targets, trends, alerts, and estimated invite routes to trackers you don't have yet.
 
