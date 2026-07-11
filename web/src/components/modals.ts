@@ -309,10 +309,13 @@ function showFormForType(typeKey: string) {
     show('modal-mock-group');
     populateScenarioSelect();
   } else if (typeKey === 'gazelle') {
-    resetStandardCredentialLabels();
+    // Gazelle needs the full set: API key + username for the ajax.php API,
+    // session cookie for profile scraping (applyPredefinedDef hides the
+    // cookie afterwards when the def disables scraping).
+    resetStandardCredentialLabels(typeKey);
     show('modal-username-group');
-    hide('modal-key-group');
-    hide('modal-session-cookie-group');
+    show('modal-key-group');
+    show('modal-session-cookie-group');
   } else if (typeKey === 'custom') {
     show('modal-username-group');
     show('modal-key-group');
@@ -623,7 +626,7 @@ export function openEditModal(
     if (editDef) applyCustomCredentialLabels(editDef, t.api_key_hint);
     else resetCustomCredentialLabels(t.api_key_hint);
   } else {
-    resetStandardCredentialLabels();
+    resetStandardCredentialLabels(t.type);
   }
 
   // Per-tracker scraping section (interval, daily cap, auto-calc, API-only).
@@ -692,6 +695,9 @@ export function openEditModal(
     hide('modal-mock-group');
     show('modal-username-group');
     show('modal-joindate-group');
+    // Re-show the key field explicitly — a prior add-flow visit (test type,
+    // or a def that hid it) leaves it display:none otherwise.
+    show('modal-key-group');
   }
 
   openTrackerPanel();
@@ -1491,12 +1497,14 @@ function resetCustomCredentialLabels(apiKeyHint?: string) {
 }
 
 /** Reset to standard Unit3D labels when switching away from custom type. */
-function resetStandardCredentialLabels() {
+function resetStandardCredentialLabels(typeKey?: string) {
   const lbl  = document.getElementById('modal-key-label');
   const hint = document.getElementById('modal-key-hint');
   const uLbl = document.getElementById('modal-username-label');
   if (lbl)  lbl.textContent = 'API Key';
-  if (hint) hint.textContent = 'Profile → API Token settings';
+  if (hint) hint.textContent = typeKey === 'gazelle'
+    ? 'Settings → Access Settings → API Keys (user profile scope)'
+    : 'Profile → API Token settings';
   if (uLbl) uLbl.innerHTML  = 'Username';
 }
 

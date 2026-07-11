@@ -10,6 +10,28 @@ version heading — those notes become the GitHub Release body automatically.
 ## [Unreleased]
 
 ### Added
+- **Hawke-uno (HUNO) support** — API-only via their custom `/api/profile`
+  endpoint (Bearer auth). Seed-division bracket counts (Vanguard → Legend +
+  Guardian) show as HUNO-exclusive stats on cards and in the Detail view, and
+  all six user groups are defined with their bracket promotion requirements.
+- **`min_counts` group requirements** — defs can now express "N torrents in a
+  per-tracker counter" promotion rules (e.g. HUNO's seed-time brackets), shown
+  as live progress bars in Targets. Rendered straight from the def like
+  `any_of`, in def order.
+- **Unread mail/notification icons in the Detail view's collapsed rows**, next
+  to the event beacon — same at-a-glance icons as grid cards, following the
+  same Display toggles.
+- Custom-API trackers that report a join date (like HUNO's `member_since`) no
+  longer ask you to enter one manually; ISO datetimes are trimmed to a date and
+  an infinite ratio (`"Inf"` at zero download) renders as ∞.
+- **Long-range history foundation** (groundwork for the upcoming History view):
+  daily history rollups are now kept ~2 years instead of 35 days (configurable
+  via `history_daily_retention_days`; ~150 KB per tracker per year), and a new
+  `GET /api/history/series` endpoint serves filtered per-tracker/per-field
+  series with automatic fine-vs-daily granularity. The existing 48 h sparklines
+  and 14-day fine history are unchanged.
+- **PWA manifest** — Yata can now be installed as an app from the browser
+  (mobile home screen / desktop). No offline caching: live stats stay live.
 - Configurable idle **API auto-refresh interval** (Settings → Scraping; default
   30 min, floor 15) and a **qui bar refresh rate** (Settings → Integrations;
   default 10 s). A server-side min-age guard coalesces background refreshes,
@@ -27,6 +49,16 @@ version heading — those notes become the GitHub Release body automatically.
   pathways sync/check, versions), bump the app version, and commit/cut releases.
 
 ### Changed
+- **Add Tracker is now just the basics** — the Targets section moved out of the
+  add flow (set targets from the dashboard's pencil or the edit screen), and
+  the session-cookie field only appears when it's actually usable (hidden for
+  API-only trackers unless their API authenticates with it).
+- **Targets editor redesigned** (edit screen): selecting a target group shows a
+  clean read-only chip summary of its requirements instead of greyed-out
+  inputs; choosing "manual" opens a builder where you add one row per target,
+  picking from every stat the tracker actually reports — including newer and
+  tracker-specific stats (FL tokens, upload snatches, HUNO's seed brackets, …),
+  which now render as progress bars on the dashboard too.
 - UNIT3D API requests now use **Bearer auth**, keeping your API token out of the
   tracker's URL access logs, with an automatic `?api_token=` fallback for older
   instances.
@@ -34,7 +66,14 @@ version heading — those notes become the GitHub Release body automatically.
   date it was fetched, so it no longer looks newer than it is.
 
 ### Fixed
+- **Icons no longer render as boxes with a partial self-hosted Font Awesome
+  kit.** If some `webfonts/*.woff2` files are missing (e.g. Light/Thin never
+  copied), the affected styles are detected at load, their icons swap to the
+  free fallback, and Settings → Display shows exactly which files to copy.
+  A fully broken kit re-enables the bundled free icon set automatically.
 - The login **username is now case-insensitive** (the password stays exact).
+- Deleting a tracker now also removes its daily history rollups (previously
+  they lingered in the database).
 
 ### Security
 - The README now prominently documents that tracker API keys and session cookies
